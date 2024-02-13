@@ -1,1 +1,50 @@
-<p>navbar works!</p>
+<mat-toolbar style="background-color: bisque;">
+
+  <a routerLink="/"  
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with menu icon">
+    <mat-icon>library_books</mat-icon> &nbsp;
+    <span class="app">QUIZ-APP</span>
+  </a>
+  
+  <span class="example-spacer"></span>
+
+  <a
+    *ngIf="!_loginService.checkForLogin()"
+    routerLink="/login"
+    mat-icon-button
+    class="example-icon favorite-icon"
+    aria-label="Example icon-button with heart icon">
+    <mat-icon>login</mat-icon>
+    <span style="color:darkcyan;">Login</span>
+  </a> &nbsp; &nbsp;
+
+  <a routerLink="/signup"
+    *ngIf="!_loginService.checkForLogin()"
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with share icon">
+    <mat-icon>how_to_reg</mat-icon>
+    <span style="color: darkcyan;">Register</span>
+  </a>
+  <a 
+    routerLink="/admin/profile"
+    *ngIf="_loginService.checkForLogin()"
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with share icon">
+    <mat-icon>person</mat-icon>
+    <span id="user" style="color: darkcyan;">{{_loginService.getLoggedInUser()}}</span>
+  </a>
+  <a 
+    (click)="logout()"
+    *ngIf="_loginService.checkForLogin()"
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with share icon">
+    <mat-icon>logout</mat-icon>
+    <span style="color: darkcyan;">Logout</span>
+  </a>
+  
+</mat-toolbar>

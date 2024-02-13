@@ -1,0 +1,47 @@
+<mat-card *ngIf="user">
+    <h3 class="title">YOUR PROFILE DETAILS</h3>
+</mat-card>
+
+<mat-card class="main-content">
+    <mat-card-content>
+        <div class="bootstrap-wrapper">
+            <div class="container">
+                <div class="container profile-img">
+                    <img src="../../../assets/images/avtor.jpg" alt="Profile Image">
+                    <h2 class="user-name">{{user.userName}}</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-10 offset-md-1">
+                        <table>
+                            <tr>
+                                <td class="td-main">USER ID</td>
+                                <td class="td-sub">{{"U-"+user.userId}}</td>
+                            </tr>
+                            <tr>
+                                <td class="td-main">USER NAME</td>
+                                <td class="td-sub">{{user.userName}}</td>
+                            </tr>
+                            <tr>
+                                <td class="td-main">PHONE NO.</td>
+                                <td class="td-sub">{{user.userPhone}}</td>
+                            </tr>
+                            <tr>
+                                <td class="td-main">ROLE</td>
+                                <td class="td-sub">{{user.authority}}</td>
+                            </tr>
+                            <tr>
+                                <td class="td-main">STATUS</td>
+                                <td class="td-sub">Active</td>
+                            </tr>
+                        </table>
+                          
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+    <mat-card-actions class="button">
+        <button mat-raised-button color="primary">Update</button>
+    </mat-card-actions>
+</mat-card>
+ 

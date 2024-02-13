@@ -1,0 +1,51 @@
+
+.title{
+    display: flex;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.main-content{
+    margin-top: 20px;
+}
+
+.profile-img{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+}
+
+.user-name{
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    border-bottom: 2px solid red;
+}
+
+table{
+    margin-top: 5px;
+    text-align: center;
+    width: 100%;
+}
+
+table tr td{
+    padding: 15px 15px;
+    border-bottom: 1px solid black;
+}
+
+.td-sub{
+    color: red;
+    font-size: 15px;
+}
+.td-main{
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+}

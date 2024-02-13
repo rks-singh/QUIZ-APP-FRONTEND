@@ -2,6 +2,7 @@
     <div class="container">
         <div class="row" style="margin-top: 20px;">
             <div class="col-md-6 offset-md-3">
+              <mat-card style="padding: 20px;">
                 <div class="container text-center">
                     <img src="../../../assets/images/QUIZ-APP.png" alt="QUIZ-APP" class="img">
                 </div>
@@ -10,26 +11,26 @@
                 <form (ngSubmit)="formSubmit()">
                     <!-- User Name field -->
                     <mat-form-field appearance="outline" class="full-width">
-                        <mat-label>User Name*</mat-label>
-                        <input matInput placeholder="Enter Username" [(ngModel)]="User.userName" name="name">
+                        <mat-label>User Name</mat-label>
+                        <input matInput placeholder="Enter Username" [(ngModel)]="User.userName" name="name" required="required">
                       </mat-form-field>
 
                       <!-- User Email field -->
                       <mat-form-field appearance="outline" class="full-width">
-                        <mat-label>User Email*</mat-label>
-                        <input type="email" matInput placeholder="Enter Email" [(ngModel)]="User.userEmail" name="email">
+                        <mat-label>User Email</mat-label>
+                        <input type="email" matInput placeholder="Enter Email" [(ngModel)]="User.userEmail" name="email" required="required">
                       </mat-form-field>
 
                       <!-- User Phone Field -->
                       <mat-form-field appearance="outline" class="full-width">
-                        <mat-label>User Phone*</mat-label>
-                        <input matInput placeholder="Enter Phone" [(ngModel)]="User.userPhone" name="phone">
+                        <mat-label>User Phone</mat-label>
+                        <input matInput placeholder="Enter Phone" [(ngModel)]="User.userPhone" name="phone" required="required">
                       </mat-form-field>
 
                        <!-- Usser Passsword Field -->
                        <mat-form-field appearance="outline" class="full-width">
-                        <mat-label>User Password*</mat-label>
-                        <input type="password" matInput placeholder="Enter Password" [(ngModel)]="User.password" name="password">
+                        <mat-label>User Password</mat-label>
+                        <input type="password" matInput placeholder="Enter Password" [(ngModel)]="User.password" name="password" required="required">
                       </mat-form-field>
 
                       <div class="container text-center">
@@ -37,6 +38,7 @@
                         <button type="reset" mat-raised-button color="warn">Clear</button>
                       </div>
                 </form>
+              </mat-card>
             </div>
         </div>
     </div>
