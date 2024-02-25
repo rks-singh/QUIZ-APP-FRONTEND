@@ -1,27 +1,26 @@
-# QUIZAPP
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.8.
+![dashboard](https://github.com/rks-singh/QUIZ-APP-BACKEND/assets/72653726/3977f6fa-ed20-40b1-9220-a1e062ca1b4e)
 
-## Development server
+![register](https://github.com/rks-singh/QUIZ-APP-BACKEND/assets/72653726/b7a8720a-c486-4375-bc2d-30165cb3d3d2)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+![Login](https://github.com/rks-singh/QUIZ-APP-BACKEND/assets/72653726/79e6572a-a476-436a-afde-8481cc7728bd)
 
-## Code scaffolding
+![admin-dashboard](https://github.com/rks-singh/QUIZ-APP-BACKEND/assets/72653726/e6e73ca9-98a1-4174-b62c-e648a67dab85)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![admin-profile](https://github.com/rks-singh/QUIZ-APP-BACKEND/assets/72653726/ae2bbff8-fbf7-40dd-bc99-b643928bca81)
 
-## Build
+![quiz-category](https://github.com/rks-singh/QUIZ-APP-BACKEND/assets/72653726/95566544-b9ef-4f0d-9456-b6922655b22a)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+![add-quiz-category](https://github.com/rks-singh/QUIZ-APP-BACKEND/assets/72653726/5e9bacd8-2389-43be-9ef1-1702fc59b360)
 
-## Running unit tests
+![all-quizzes](https://github.com/rks-singh/QUIZ-APP-BACKEND/assets/72653726/2751bd66-ed2a-4ccf-81ac-81a952d232ad)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+![add-quiz](https://github.com/rks-singh/QUIZ-APP-BACKEND/assets/72653726/04d7bbfb-ccc4-495c-baad-e85a0ef56566)
 
-## Running end-to-end tests
+![all-availbale-quiz](https://github.com/rks-singh/QUIZ-APP-BACKEND/assets/72653726/6ae02ab2-d21e-4c70-bd16-c14eaa2634a3)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+![instruction-page](https://github.com/rks-singh/QUIZ-APP-BACKEND/assets/72653726/ba271eff-d50f-4784-b9e8-270dbb57c418)
 
-## Further help
+![exam-page](https://github.com/rks-singh/QUIZ-APP-BACKEND/assets/72653726/bfdcb79a-29da-4207-be1b-8f0793f699b5)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![exam-result](https://github.com/rks-singh/QUIZ-APP-BACKEND/assets/72653726/f83cc4aa-4d60-4ab9-a8d1-daa3fd979286)
