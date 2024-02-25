@@ -24,14 +24,9 @@ import { CommonModule } from '@angular/common';
 })
 @Injectable()
 export class NavbarComponent {
+  constructor(public _loginService: LoginService, private router: Router) {}
   logout() {
     this._loginService.doLogout();
-    this.router.navigate(['/login'])
-    
+    this.router.navigate(['/login']);
   }
-  // ngOnInit(): void {}
-  constructor(
-    public _loginService: LoginService,
-    private router : Router
-    ) {}
 }

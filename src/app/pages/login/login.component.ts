@@ -12,8 +12,6 @@ import { LoginService } from '../../service/login.service';
 import { HttpClientModule } from '@angular/common/http';
 import { Router, RouterModule } from '@angular/router';
 
-
-
 @Component({
   standalone: true,
   imports: [
@@ -41,15 +39,14 @@ export class LoginComponent {
   constructor(
     private _snakbar: MatSnackBar,
     private loginService: LoginService,
-    private route : Router
+    private route: Router
   ) {}
 
   ngOnInit(): void {}
 
   formSubmit() {
+    let current_user: string = 'Ravi Singh';
 
-     let current_user:string = 'Ravi Singh';
-  
     if (
       this.LoginData.userName.trim() == '' ||
       this.LoginData.userName == null
@@ -71,38 +68,31 @@ export class LoginComponent {
       });
       return;
     }
-    console.log(this.LoginData);
-
     //Request to a server to generate token.
     this.loginService.generateToken(this.LoginData).subscribe(
       (data: any) => {
-        // current_user = this.LoginData.userName;
-        // console.log("Current User "+current_user);
-        console.log(data);
         this.loginService.storeToken(data.token);
         this.loginService.storeUserDetails(data.response);
 
         //Redirecting to ADMIN Dashboard and User dashboard.
-        if(this.loginService.getUserRole() == "ADMIN"){
+        if (this.loginService.getUserRole() == 'ADMIN') {
           //Redirect to Admin Dashboard
-          this.route.navigate(['admin'])
-
-        }else if(this.loginService.getUserRole() == "NORMAL"){
+          this.route.navigate(['admin']);
+        } else if (this.loginService.getUserRole() == 'NORMAL') {
           //Redirect to User Dasboard
-          this.route.navigate(['user'])
-
-        }else{
+          this.route.navigate(['user']);
+        } else {
           // Do logout
           this.loginService.doLogout();
         }
       },
       (error) => {
-        console.log(error);
         this._snakbar.open('Invalid Details Try Again !!', 'OK', {
           duration: 2000,
           verticalPosition: 'bottom',
           horizontalPosition: 'end',
         });
-      });
+      }
+    );
   }
 }

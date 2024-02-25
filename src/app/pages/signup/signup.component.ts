@@ -71,15 +71,11 @@ export class SignupComponent {
       return;
     }
 
-    console.log(this.User);
-
     this.userService.addUser(this.User).subscribe(
       (data) => {
-        console.log(data);
         Swal.fire('Success', 'Form Submitted Successfully !!', 'success');
       },
       (error) => {
-        console.log(error);
         this._snakbar.open('User Already Exist!!', 'OK', {
           duration: 2000,
           verticalPosition: 'top',

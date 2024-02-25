@@ -1,0 +1,19 @@
+.title{
+    padding: 5px;
+    font-weight: bold;
+    margin-left: 3px;
+}
+
+.main-content{
+    margin-top: 15px;
+    padding: 15px;
+}
+
+.full-width{
+    width: 100%;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+}

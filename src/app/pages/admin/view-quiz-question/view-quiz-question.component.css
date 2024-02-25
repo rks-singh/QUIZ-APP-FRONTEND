@@ -1,0 +1,24 @@
+.title {
+  padding: 10px;
+  font-weight: bold;
+  margin-left: 3px;
+}
+.main-content {
+  margin-top: 15px;
+  padding: 15px;
+}
+.question{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.divider{
+    margin-top: 10px;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+}
+
+.main-content-start{
+  margin-top: 15px;
+}

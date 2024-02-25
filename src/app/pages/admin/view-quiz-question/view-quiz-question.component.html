@@ -1,0 +1,50 @@
+
+<mat-card>
+    <h3 class="title">Questions of {{quizTitle}}</h3>
+</mat-card>
+
+<div class="bootstrap-wrapper main-content">
+    <div class="row">
+        <div class="col-md-12">
+            <mat-card *ngFor="let question of questions; let i = index" class="main-content-start">
+                <mat-card-content>
+                    <div>
+                        <b>Q{{i+1}})</b> &nbsp;
+                        <span [innerHTML]="question.questionContent"></span>
+                    </div>
+                    <div class="container-fluid question">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p> <b>1) </b>{{question.option_1}}</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p> <b>2) </b>{{question.option_2}}</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p> <b>3) </b>{{question.option_3}}</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p> <b>4) </b>{{question.option_4}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <mat-divider></mat-divider>
+                    <div class="divider">
+                        <div>
+                            <b>Correct Answer : </b>&nbsp;
+                            <span>{{question.answer}}</span>
+                        </div>
+                    </div>
+                    
+                </mat-card-content>
+                <mat-card-actions>
+                    <button routerLink="/admin/update-question/{{question.questionId}}/{{quizTitle}}" mat-raised-button color="accent">Update</button> &nbsp;
+                    <button (click)="deleteQuestion(question.questionId)" mat-raised-button color="warn">Delete</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+</div>
+<div class="conatiner btn">
+    <button routerLink="/admin/add-question/{{quizId}}/{{quizTitle}}" mat-raised-button color="primary">Add Question</button>
+</div>

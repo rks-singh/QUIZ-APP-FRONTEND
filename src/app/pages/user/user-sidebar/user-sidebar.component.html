@@ -1,0 +1,38 @@
+<mat-card id="sidebar">
+    <mat-action-list>
+      <div mat-subheader class="menu">MENU</div>
+      <button mat-list-item routerLink="/user">
+          <mat-icon mat-list-icon>home</mat-icon>
+          <span>HOME</span>
+      </button>
+      <button mat-list-item routerLink="/user/profile">
+          <mat-icon>person</mat-icon>
+          <span>USER</span>
+      </button>
+      <button mat-list-item routerLink="/user/load-quiz/0">
+        <mat-icon>psychology_alt</mat-icon>
+        <span> ALL QUIZZES</span>
+      </button>
+      <button routerLink="/user/load-quiz/{{category.categoryId}}" mat-list-item *ngFor="let category of categories">
+        <mat-icon>quiz</mat-icon>
+        <span>{{category.categoryTitle.toUpperCase()}}</span>
+    </button>
+    <!-- <button mat-list-item >
+      <mat-icon>add_circle_outline</mat-icon>
+      <span>ADD CATEGORIES</span>
+  </button>
+  <button mat-list-item>
+    <mat-icon>psychology_alt</mat-icon>
+    <span>QUIZZES</span>
+  </button>
+  <button mat-list-item >
+    <mat-icon>assignment_add</mat-icon>
+    <span>ADD QUIZ</span>
+  </button> -->
+  <button mat-list-item (click)="logOut()">
+    <mat-icon>logout</mat-icon>
+    <span>Logout</span>
+  </button>
+    </mat-action-list>
+  </mat-card>
+  

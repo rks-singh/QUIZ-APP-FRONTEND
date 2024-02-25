@@ -1,0 +1,142 @@
+<div class="bootstrap-wrapper" *ngIf="!isSubmit">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3">
+        <mat-card class="instruction">
+          <mat-card-header>
+            <mat-card-title>Instruction</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <ol>
+              <li><b>Do not Refresh page.</b></li>
+              <li><b>Do not switch tabs.</b></li>
+              <li><b>Do not minimize window.</b></li>
+            </ol>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div class="col-md-7">
+        <ng-container *ngIf="questions">
+          <h1 class="mt20">
+            On Going Quiz : <b>{{ questions[0].quiz.quizTitle }}</b>
+          </h1>
+        </ng-container>
+        <mat-card style="margin-bottom: 20px;"
+          *ngFor="let question of questions; let i = index"
+          class="mt10"
+        >
+          <mat-card-content>
+            <p>
+              Q {{ i + 1 }})
+              <span [innerHTML]="question.questionContent"></span>
+            </p>
+            <mat-divider></mat-divider>
+            <div class="row mt15">
+              <div class="col-md-6">
+                <input
+                  type="radio"
+                  [value]="question.option_1"
+                  [name]="$any(i)"
+                  [(ngModel)]="question.givenAnswer"
+                />
+                <span>{{ question.option_1 }}</span>
+              </div>
+              <div class="col-md-6">
+                <input
+                  type="radio"
+                  [value]="question.option_2"
+                  [name]="$any(i)"
+                  [(ngModel)]="question.givenAnswer"
+                />
+                <span>{{ question.option_2 }}</span>
+              </div>
+              <div class="col-md-6 mt15">
+                <input
+                  type="radio"
+                  [value]="question.option_3"
+                  [name]="$any(i)"
+                  [(ngModel)]="question.givenAnswer"
+                />
+                <span>{{ question.option_3 }}</span>
+              </div>
+              <div class="col-md-6 mt15">
+                <input
+                  type="radio"
+                  [value]="question.option_4"
+                  [name]="$any(i)"
+                  [(ngModel)]="question.givenAnswer"
+                />
+                <span>{{ question.option_4 }}</span>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+        <div class="container btn">
+          <button (click)="submitQuiz()" mat-raised-button color="primary">
+            Submit Quiz
+          </button>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <mat-card class="timer">
+          <mat-card-header>
+            <mat-card-title>
+              <b>Your Time Left !!</b><br />
+              <b class="timer-value">{{ getFormatedTime() }}</b>
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <mat-spinner
+              color="warn"
+              mode="determinate"
+              [value]="(timer / (questions.length * 2 * 60)) * 100"
+            ></mat-spinner>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Conatiner to Show Answer -->
+<div class="bootstrap-wrapper mt30" *ngIf="isSubmit">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <mat-card>
+        <mat-card-header class="title">
+          <mat-card-title>
+            <b>{{ questions[0].quiz.quizTitle }} Result</b>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <mat-divider></mat-divider>
+          &nbsp;
+          <h2>
+            Mark Obtained: <span class="answer">{{ markGot }}</span>
+          </h2>
+          <mat-divider></mat-divider>
+          <h2>
+            Correct Answer: <span class="answer">{{ correctAnswers }}</span>
+          </h2>
+          <mat-divider></mat-divider>
+          <h2>
+            Attempted Question: <span class="answer">{{ attempted }}</span>
+          </h2>
+        </mat-card-content>
+        <mat-card-actions class="btn">
+          <button (click)="printResult()" mat-raised-button color="primary">
+            Print Result
+          </button>
+          &nbsp;
+          <button
+            mat-raised-button
+            color="accent"
+            routerLink="/user/load-quiz/0"
+          >
+            Home
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>

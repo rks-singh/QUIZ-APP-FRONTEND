@@ -1,0 +1,21 @@
+.title {
+  padding: 5px;
+  font-weight: bold;
+  margin-left: 3px;
+}
+
+.main-content {
+  margin-top: 15px;
+  padding: 10px;
+}
+
+.example-header-image {
+  background-image: url("../../../../assets/images/quiz.png");
+  background-size: cover;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}

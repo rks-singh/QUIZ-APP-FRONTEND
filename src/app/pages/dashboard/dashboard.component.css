@@ -1,0 +1,9 @@
+
+.image-content{
+    height: 663px;
+    background-color: rgb(116, 107, 105);
+}
+.image-content img{
+    width: 100%;
+    height: 100%;
+}

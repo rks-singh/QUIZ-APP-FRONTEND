@@ -1,18 +1,13 @@
 import { Component } from '@angular/core';
-import { Router, RouterModule } from '@angular/router';
-import { LoginService } from '../../../service/login.service';
-import { LoginComponent } from '../../login/login.component';
-
+import { RouterOutlet } from '@angular/router';
+import { UserSidebarComponent } from '../user-sidebar/user-sidebar.component';
 
 @Component({
   selector: 'app-user-dashboard',
   standalone: true,
-  imports: [
-  ],
-  providers:[],
+  imports: [RouterOutlet,UserSidebarComponent],
+  providers: [],
   templateUrl: './user-dashboard.component.html',
-  styleUrl: './user-dashboard.component.css'
+  styleUrl: './user-dashboard.component.css',
 })
-export class UserDashboardComponent {
-
-}
+export class UserDashboardComponent {}

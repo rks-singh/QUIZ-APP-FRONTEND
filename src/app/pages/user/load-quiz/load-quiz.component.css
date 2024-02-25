@@ -1,0 +1,36 @@
+.title {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.row{
+  margin-top: 20px;
+}
+
+.quiz-card{
+  min-width: fit-content;
+  margin-right: 15px;
+  margin-bottom: 20px;
+}
+.truncate {
+  display: block;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.example-header-image {
+  background-image: url("../../../../assets/images/quiz.png");
+  background-size: cover;
+}
+.no-quiz{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: red;
+}
+

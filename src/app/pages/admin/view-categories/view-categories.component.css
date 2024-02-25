@@ -1,0 +1,39 @@
+.title{
+    padding: 5px;
+    font-weight: bold;
+    margin-left: 3px;
+}
+
+.icon{
+    margin-top: 10px;
+}
+
+.main-content{
+    margin-top: 15px;
+    padding: 15px;
+}
+
+.list-item{
+    border-bottom: 1px solid red;
+    padding-bottom: 40px;
+    padding-top: 25px;
+}
+
+.category-title{
+    position: absolute;
+    margin-top: 1px;
+    margin-left: 4px;
+}
+
+.category-description{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 4px;
+   margin-bottom: 3px;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
